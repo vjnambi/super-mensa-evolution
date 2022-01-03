@@ -59,9 +59,9 @@ export default function memberList(){
       })
     return (
         <div className={styles.grid}>
-          {members.map( n => <Link key={n.id} href={`/${n.name.toLowerCase()}`}><a  className={styles.memberCard}>
-          <Image src={n.pfp} width={100} height={100} />
-          <p>{n.name}</p>
+          {members.map( (n,i) => <Link key={i} href={`/${n.name.toLowerCase()}`}><a key={i}  className={styles.memberCard}>
+          <Image key={i} src={n.pfp} width={100} height={100} />
+          <p key={i}>{n.name}</p>
           </a></Link>)}
         </div>
     )
