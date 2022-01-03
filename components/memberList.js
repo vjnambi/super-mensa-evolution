@@ -12,7 +12,7 @@ const getMembers = () => {
             pfp: satori
         },
         {
-            name: "Jojo",
+            name: "Jojo Pongo",
             pfp: potato
         },
         {
