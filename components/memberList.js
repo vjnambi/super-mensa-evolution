@@ -51,25 +51,11 @@ export default function memberList(){
       })
     return (
         <div className={styles.grid}>
-          {members.map((n,i) => <Link href={`/${n.name.toLowerCase()}`}><a  className={styles.memberCard}>
+          {members.map((n,i) => <Link key={i} href={`/${n.name.toLowerCase()}`}><a  className={styles.memberCard}>
           <Image src={n.pfp} width={100} height={100} />
           <p>{n.name}</p>
           </a></Link>)}
         </div>
     )
-}
-
-export function getAllPostIds(){
-    getMembers().map((n,i) => {
-        return {
-            params: {
-                id: n.name
-            }
-        }
-    })
-}
-
-export function getPostData(){
-
 }
 
