@@ -16,7 +16,7 @@ const getMembers = () => {
             pfp: potato
         },
         {
-            name: "Pope\xA0Cheetos\xA0XIV",
+            name: "Pope Cheetos XIV",
             pfp: potato
         },
         {
@@ -28,7 +28,7 @@ const getMembers = () => {
             pfp: potato
         },
         {
-            name: "Logan\xA0Paul\xA0Ryan",
+            name: "Logan Paul Ryan",
             pfp: potato
         },
         {
@@ -51,7 +51,7 @@ export default function memberList(){
       })
     return (
         <div className={styles.grid}>
-          {members.map( (n,i) => <Link key={i} href={`/posts/${n.name.toLowerCase()}`}><a key={i}  className={styles.memberCard}>
+          {members.map( (n,i) => <Link key={i} href={`/posts/${encodeURI(n.name.toLowerCase())}`}><a key={i}  className={styles.memberCard}>
           <Image key={i} src={n.pfp} width={100} height={100} />
           <p key={i}>{n.name}</p>
           </a></Link>)}
