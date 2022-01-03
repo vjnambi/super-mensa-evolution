@@ -68,8 +68,8 @@
   justify-content: center;
   align-items: center;
   /*background-image: url("../public/satori.png");*/
+  /*background-size: cover;*/
   background-color: #991170;
-  background-size: cover;
   border-radius: 10px;
   padding: 1em;
   margin: 1em;
