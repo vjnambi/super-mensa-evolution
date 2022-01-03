@@ -4,9 +4,9 @@ import styles from '../styles/Home.module.css'
 import banner from '../components/banner'
 import bannerSpacer from '../components/bannerSpacer'
 import head from '../components/head'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-export default function resources() {
+export default function Resources() {
     const [result, setResult] = useState("???")
     const [apiKey, setApiKey] = useState("")
 

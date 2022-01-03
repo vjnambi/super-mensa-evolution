@@ -5,7 +5,7 @@ import banner from '../components/banner'
 import bannerSpacer from '../components/bannerSpacer'
 import head from '../components/head'
 
-export default function members() {
+export default function Members() {
     return (
       <div className={styles.container}>
        {head()}
