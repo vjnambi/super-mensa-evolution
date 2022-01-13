@@ -5,6 +5,7 @@ import banner from '../components/banner'
 import bannerSpacer from '../components/bannerSpacer'
 import head from '../components/head'
 import { useState } from 'react'
+import Script from 'next/script'
 
 export default function Resources() {
     const [result, setResult] = useState("???")
@@ -37,13 +38,17 @@ export default function Resources() {
             <main className={styles.main}>
                 <form onSubmit={handleSubmit} className={styles.main}>
                     <input type="text" placeholder='API Key' value={apiKey} onChange={handleApiKeyChange}></input>
+
                     <br />
                     <button>Submit</button>
                     <br />
-                    {result == "???" ? "???" : Math.round(result/(60*24))} days, {result == "???" ? "???" : Math.round(result/(60))%24} hours and {result == "???" ? "???" : Math.round(result)%60} minutes until clash
+                    {result == "???" ? "???" : Math.round(result / (60 * 24))} days, {result == "???" ? "???" : Math.round(result / (60)) % 24} hours and {result == "???" ? "???" : Math.round(result) % 60} minutes until clash
                 </form>
 
+
+
             </main>
+
         </div>
     )
 }

@@ -4,6 +4,7 @@ import missionStatement from '../components/missionStatement'
 import banner from '../components/banner'
 import bannerSpacer from '../components/bannerSpacer'
 import head from '../components/head'
+import Script from 'next/script'
 
 export default function Home() {
   return (
@@ -22,6 +23,9 @@ export default function Home() {
         {missionStatement()}
         
       </main>
+        
+      
+
     </div>
   )
 }

@@ -1,122 +1,141 @@
-
-
 .container {
-  background-image: url("../public/potato.jpg");
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    background-image: url("../public/origin.png");
+    background-size: contain;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
+    min-height: 100vh;
+    padding: 4rem .5rem;
+    margin: .5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background: rgba(211,211,211,.95);
 }
 
 .banner {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  height:64px
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 64px;
+    background: rgba(211,211,211,.95);
 }
 
-.bannerSpacer{
-  height: 64px;
-  width: 100%;
+.bannerSpacer {
+    height: 64px;
+    width: 100%;
 }
 
-.bannerLogo{
-  float:left;
+.bannerLogo {
+    float: left;
 }
 
-.bannerCard{
-  background-color: inherit;
-  float:left;
-  height: 100%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0rem 0.4rem;
-  transition: 0.3s ease;
+.bannerCard {
+    background-color: inherit;
+    float: left;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0.4rem;
+    transition: 0.3s ease;
 }
 
-.bannerCard:hover,.bannerCard:focus,.bannerCard:active {
-  color: white;
+.bannerCard:hover,
+.bannerCard:focus,
+.bannerCard:active {
+    color: white;
 }
 
 .title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  text-align: center;
-
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+    text-align: center;
 }
 
 .prettyBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #991170;
-  border-radius: 10px;
-  padding: 1em;
-  margin: 1em;
-  transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #991170;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em;
+    transition: 0.3s ease;
 }
 
-.prettyBox:hover,.prettyBox:focus,.prettyBox:active{
-  padding: 1.75em;
-  margin: 0em;
-  font-size: 1.1em;
+.prettyBox:hover,
+.prettyBox:focus,
+.prettyBox:active {
+    padding: 1.75em;
+    margin: 0em;
+    font-size: 1.1em;
 }
-
 
 .grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
 }
 
 .memberCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 25px;
-  padding: 25px;
-  text-align: center;
-  border: 2px solid black;
-  border-radius: 10px;
-  max-width: 200px;
-  min-width: 200px;
-  max-height: 250px;
-  min-height: 250px;
-  background-color: #991170;
-  transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 250px;
+    min-height: 250px;
+    background-color: #991170;
+    transition: 0.3s ease;
 }
 
-.memberCard:hover,.card:focus,.card:active {
-  color: white;
-  border-color: white;
-  max-width: 220px;
-  min-width: 220px;
-  max-height: 275px;
-  min-height: 275px;
-  margin: 12px 15px;
+.memberCard:hover,
+.card:focus,
+.card:active {
+    color: white;
+    max-width: 220px;
+    min-width: 220px;
+    max-height: 275px;
+    min-height: 275px;
+    margin: 12px 15px;
 }
 
+.highlightVideo {
+    position:absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+}
 
+.highlightWrapper {
+    --scale: 0.9;
+    position: relative;
+    width: calc(100%*var(--scale));
+    height: 0;
+    padding-bottom: calc(56.25%*var(--scale));
 
-
+}

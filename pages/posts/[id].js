@@ -33,7 +33,9 @@ export default function Post({ postData }) {
         <div>
           <h2>{postData.name}</h2>
         </div>
-        <iframe width="840" height="472" src={postData.highlight} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <div className={styles.highlightWrapper}>
+        <iframe className={styles.highlightVideo} src={postData.highlight} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </main>
     </div>
