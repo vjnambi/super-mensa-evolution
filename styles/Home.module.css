@@ -154,3 +154,9 @@ width: 100%;
     position: relative;
 }
 
+.description {
+    --scale: 0.9;
+    width: calc(100%*var(--scale));
+    background: rgba(0,0,0,0);
+}
+

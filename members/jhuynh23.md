@@ -4,6 +4,4 @@ highlight: 'https://www.youtube.com/embed/LxjrY-rVECI'
 image:
 ---
 
-Here's a bunch of text that hypes up and describes Jhuynh23.
-
-He's not a chungus
+An Esports enthusiast and ADC main, Jhuynh23 plays most ADC's, easily adapting as the meta changes. Out of all the champs in his pool, Jhuynh23 prefers Lucian and Jhin. Recently Jhuynh23 has also been finding success in the top lane on Yasuo and Camille.

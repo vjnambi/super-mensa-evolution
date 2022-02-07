@@ -23,7 +23,7 @@ const getMembers = () => {
         },
         {
             name: "Peesh",
-            pfp: "	https://cdn.discordapp.com/avatars/177253048337432576/10379f39295824227ecb2557aabcc470.webp"
+            pfp: "https://cdn.discordapp.com/avatars/177253048337432576/10379f39295824227ecb2557aabcc470.webp"
         },
         {
             name: "Logan Paul Ryan",
@@ -35,7 +35,7 @@ const getMembers = () => {
         },
         {
             name: "1nsurrection",
-            pfp: "https://cdn.discordapp.com/avatars/221652183278419968/4cade8322c684359ff0e0b50c093f590.webp?size=240"
+            pfp: "https://cdn.discordapp.com/avatars/221652183278419968/4cade8322c684359ff0e0b50c093f590.webp"
         }
     ]
 }

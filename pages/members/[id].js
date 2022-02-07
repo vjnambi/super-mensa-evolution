@@ -38,7 +38,7 @@ export default function Member({ memberData }) {
         {condImage(memberData.image)}
         {condIframe(memberData.highlight)}
         
-        <div dangerouslySetInnerHTML={{ __html: memberData.contentHtml }} />
+        <div className={styles.description} dangerouslySetInnerHTML={{ __html: memberData.contentHtml }} />
       </main>
     </div>
   )
