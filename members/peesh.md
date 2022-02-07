@@ -1,6 +1,7 @@
 ---
 name: 'Peesh'
-highlight: 'https://www.youtube.com/embed/MK1Pixuhr5A'
+highlight:
+image: "https://cdn.discordapp.com/avatars/177253048337432576/10379f39295824227ecb2557aabcc470.webp"
 ---
 
 Here's a bunch of text that hypes up and describes Peesh.

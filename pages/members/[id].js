@@ -4,6 +4,8 @@ import bannerSpacer from '../../components/bannerSpacer'
 import head from '../../components/head'
 import { getAllMemberIds, getMemberData } from '../../lib/members'
 import Image from 'next/image'
+import condImage from '../../components/condImage'
+import condIframe from '../../components/condIframe'
 
 export async function getStaticProps({ params }) {
   const memberData = await getMemberData(params.id)
@@ -33,9 +35,9 @@ export default function Member({ memberData }) {
         <div>
           <h2>{memberData.name}</h2>
         </div>
-        <div className={styles.highlightWrapper}>
-        <iframe className={styles.highlightVideo} src={memberData.highlight} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-        </div>
+        {condImage(memberData.image)}
+        {condIframe(memberData.highlight)}
+        
         <div dangerouslySetInnerHTML={{ __html: memberData.contentHtml }} />
       </main>
     </div>

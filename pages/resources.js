@@ -37,6 +37,7 @@ export default function Resources() {
             {bannerSpacer()}
             <main className={styles.main}>
                 <form onSubmit={handleSubmit} className={styles.main}>
+                    <h2>Guys what time is clash?</h2>
                     <input type="text" placeholder='API Key' value={apiKey} onChange={handleApiKeyChange}></input>
 
                     <br />

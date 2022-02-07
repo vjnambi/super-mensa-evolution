@@ -14,7 +14,7 @@ export default function Members() {
         {bannerSpacer()}
         
         <main className={styles.main}>
-                 
+          <h2>Members</h2>
           {memberList()}
           
         </main>
