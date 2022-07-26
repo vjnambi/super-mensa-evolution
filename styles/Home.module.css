@@ -160,3 +160,19 @@ width: 100%;
     background: rgba(0,0,0,0);
 }
 
+.onePxSolidBlack {
+    border: 1px solid black
+}
+
+.round {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

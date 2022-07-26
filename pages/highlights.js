@@ -13,17 +13,17 @@ import SMELogo from '../public/SMELogo.png'
 
 
 export async function getStaticProps({params}){
-  const response = await axios.get('http://localhost:3000/api/members');
-  const memberListData = response.data.resources
+  const response = await axios.get('https://super-mensa-evolution.vercel.app/api/highlights');
+  const highlightListData = response.data.resources
   //console.log(memberListData);
   return {
     props: {
-      memberListData
+      highlightListData
     }
   };
 }
 
-export default function Members({ memberListData }) {
+export default function Highlights({ highlightListData }) {
     return (
       <div className={styles.container}>
         {head()}
@@ -32,11 +32,11 @@ export default function Members({ memberListData }) {
         
         <main className={styles.main}>
 
-          <h2>Members</h2>
+          <h2>Highlights</h2>
           <div className={styles.grid}>
-          {memberListData.map( (n,i) => <Link key={i} href={`members/${n.Route}`}><a key={i}  className={styles.memberCard}>
-          <Image key={memberListData.length+i} src={n.PFPLink} width={100} height={100} />
-          <p key={i}>{n.MemberName}</p>
+          {highlightListData.map( (n,i) => <Link key={i} href={`highlights/${n.HighlightID}`}><a key={i}  className={styles.memberCard}>
+          <Image key={highlightListData.length+i} src={`https://img.youtube.com/vi/${n.YTID}/hqdefault.jpg`} width={100} height={100} />
+          <p key={i}>{n.HighlightName}</p>
           </a></Link>)}
           </div>
           

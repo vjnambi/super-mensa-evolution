@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import missionStatement from '../components/missionStatement'
 import banner from '../components/banner'
-import bannerSpacer from '../components/bannerSpacer'
 import head from '../components/head'
 import Image from 'next/image'
 
@@ -12,7 +11,6 @@ export default function Home() {
       {head()}
 
       {banner()}
-      {bannerSpacer()}
 
       <main className={styles.main}>
 

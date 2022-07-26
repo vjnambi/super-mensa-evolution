@@ -1,7 +1,7 @@
 import styles from '../../styles/Home.module.css'
 import banner from '../../components/banner'
 import head from '../../components/head'
-import { getAllMemberIds, getMemberData } from '../../lib/members'
+import { getAllHighlightIds, getHighlightData } from '../../lib/highlights'
 import Image from 'next/image'
 import condImage from '../../components/condImage'
 import condIframe from '../../components/condIframe'
@@ -11,19 +11,19 @@ import axios from 'axios'
 export async function getStaticProps({params}){
   const axios = require('axios')
   //console.log(`getStaticPropsAddress: http://localhost:3000/api/members/${params}`)
-  const response = await axios.get(`https://super-mensa-evolution.vercel.app/api/members/${params.id}`);
-  const memberData = response.data.resources[0]
+  const response = await axios.get(`https://super-mensa-evolution.vercel.app/api/highlights/${params.id}`);
+  const highlightData = response.data.resources[0];
   //console.log(`getStaticProps: memberData: ${JSON.stringify(memberData)}`);
   return {
     props: {
-      memberData
+      highlightData
     }
   };
 }
 
 export async function getStaticPaths() {
   //console.log(getAllMemberIds())
-  const paths = await getAllMemberIds()
+  const paths = await getAllHighlightIds()
   console.log(paths)
   return {
     paths,
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
   }
 }
 
-export default function Member({ memberData }) {
+export default function Highlight({ highlightData }) {
   //console.log(`MemberRender: ${JSON.stringify(memberData)}`)
   return (
 
@@ -40,11 +40,9 @@ export default function Member({ memberData }) {
       {banner()}
       <main className={styles.main}>
         <div style={{width: '100%', margin: '10px'}} className={styles.centered}>
-          <Image className={styles.round} src={memberData.PFPLink} width={100} height={100}></Image>
-          <h2 style={{marginLeft: '10px'}} className={styles.centered}>{memberData.MemberName}</h2>
+          <h2 className={styles.centered}>{highlightData.HighlightName}</h2>
         </div>
-        {condIframe(memberData.HighlightLink)}
-        <p>{memberData.Description}</p>
+        {condIframe(`https://www.youtube.com/embed/${highlightData.YTID}`)}
       </main>
     </div>
   )
