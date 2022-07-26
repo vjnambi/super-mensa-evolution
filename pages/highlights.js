@@ -12,7 +12,7 @@ import SMELogo from '../public/SMELogo.png'
 
 
 
-export async function getStaticProps({params}){
+export async function getServerSideProps({params}){
   const response = await axios.get('https://super-mensa-evolution.vercel.app/api/highlights');
   const highlightListData = response.data.resources
   //console.log(memberListData);

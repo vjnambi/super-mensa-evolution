@@ -8,7 +8,7 @@ import condIframe from '../../components/condIframe'
 import { Button } from '@material-ui/core'
 import axios from 'axios'
 
-export async function getStaticProps({params}){
+export async function getServerSideProps({params}){
   const axios = require('axios')
   //console.log(`getStaticPropsAddress: http://localhost:3000/api/members/${params}`)
   const response = await axios.get(`https://super-mensa-evolution.vercel.app/api/highlights/${params.id}`);
@@ -21,7 +21,7 @@ export async function getStaticProps({params}){
   };
 }
 
-export async function getStaticPaths() {
+/*export async function getStaticPaths() {
   //console.log(getAllMemberIds())
   const paths = await getAllHighlightIds()
   console.log(paths)
@@ -29,7 +29,7 @@ export async function getStaticPaths() {
     paths,
     fallback: false
   }
-}
+}*/
 
 export default function Highlight({ highlightData }) {
   //console.log(`MemberRender: ${JSON.stringify(memberData)}`)
