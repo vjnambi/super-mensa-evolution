@@ -62,11 +62,11 @@ export default function Resources() {
                             </tr>
                             :
                             result.map((n,i) => 
-                                <tr>
-                                    <td className={styles.onePxSolidBlack}>{n.nameKey}</td>
-                                    <td className={styles.onePxSolidBlack}>{n.nameKeySecondary}</td>
-                                    <td className={styles.onePxSolidBlack}>{new Date(1970,0,0,17,0,0,n.schedule[0].startTime).toLocaleDateString()}</td>
-                                    <td className={styles.onePxSolidBlack}>{`${new Date(1970,0,0,17,0,0,n.schedule[0].startTime).toLocaleTimeString()} (${Intl.DateTimeFormat().resolvedOptions().timeZone})`}</td>
+                                <tr key={i}>
+                                    <td key={result.length+i} className={styles.onePxSolidBlack}>{n.nameKey}</td>
+                                    <td key={2*result.length+i} className={styles.onePxSolidBlack}>{n.nameKeySecondary}</td>
+                                    <td key={3*result.length+i} className={styles.onePxSolidBlack}>{new Date(1970,0,0,17,0,0,n.schedule[0].startTime).toLocaleDateString()}</td>
+                                    <td key={4*result.length+i} className={styles.onePxSolidBlack}>{`${new Date(1970,0,0,17,0,0,n.schedule[0].startTime).toLocaleTimeString()} (${Intl.DateTimeFormat().resolvedOptions().timeZone})`}</td>
                                 </tr>
                         )}
                     </table>
