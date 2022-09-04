@@ -1,7 +1,9 @@
 const { CosmosClient } = require("@azure/cosmos");
+var he = require('he');
 import axios from "axios";
 import { stringify } from "gray-matter";
 import config from "../../../config";
+
 
   export default async function handler(req, res) {
     const endpoint = config.endpoint;
@@ -26,11 +28,11 @@ import config from "../../../config";
 
       const descriptionLink = responseJSON.resources[0].DescriptionLink
 
-      const descriptionResponse = await axios.get(descriptionLink).then(stuff => stuff.data)
+      const descriptionResponse = await axios.get(descriptionLink).then(stuff => he.decode(stuff.data))
 
       //console.log(descriptionResponse)
 
-      const descriptionText = JSON.parse(`"${descriptionResponse.match("TextStarter(.*)TextEnder")[1]}"`)
+      const descriptionText = (JSON.parse(`"${descriptionResponse.match("TextStarter(.*)TextEnder")[1]}"`))
 
       //console.log(descriptionText)
 

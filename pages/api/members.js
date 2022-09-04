@@ -14,7 +14,7 @@ import config from "../../config";
   
     if (endpoint) {
       const querySpec = {
-        query: "SELECT c.MemberName, c.PFPLink, c.Route FROM c WHERE c.ResourceType='0' ORDER BY c.MemberName ASC",
+        query: "SELECT c.MemberName, c.PFPLink, c.Route FROM c WHERE c.ResourceType='0' ORDER BY c.Route ASC",
       };
   
       const responseJSON = await containerID.items
