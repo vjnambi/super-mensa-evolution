@@ -28,7 +28,9 @@ import config from "../../../config";
 
       const descriptionResponse = await axios.get(descriptionLink).then(stuff => stuff.data)
 
-      const descriptionText = descriptionResponse.match("TextStarter(.*)TextEnder")[1]
+      //console.log(descriptionResponse)
+
+      const descriptionText = JSON.parse(`"${descriptionResponse.match("TextStarter(.*)TextEnder")[1]}"`)
 
       //console.log(descriptionText)
 
