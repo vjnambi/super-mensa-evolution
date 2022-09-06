@@ -11,6 +11,7 @@ export default function banner() {
             <Link href="/members"><a h className={styles.bannerCard}>Members</a></Link>
             <Link href="/highlights"><a h className={styles.bannerCard}>Highlights</a></Link>
             <Link href="/resources"><a className={styles.bannerCard}>Resources</a></Link>
+            <Link href="/search"><a className={styles.bannerCard}>Search</a></Link>
         </div>
         <div className={styles.bannerSpacer}></div>
         </>
